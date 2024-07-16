@@ -8,9 +8,9 @@ This script allows you to visualize car price data from an Excel file. You can g
 - Prefill the car name based on the filename.
 - Generate scatter plots for:
   - Price vs. Year with mileage as the color.
-[Scatter plot Price vs. Year with mileage as the color](porsche_911_year_vs_price_16072024.png)
+![Scatter plot Price vs. Year with mileage as the color](porsche_911_year_vs_price_16072024.png)
   - Price vs. Mileage with year as the color.
-[Scatter plot Price vs. Mileage with year as the color](porsche_911_mileage_vs_price_16072024.png)
+![Scatter plot Price vs. Mileage with year as the color](porsche_911_mileage_vs_price_16072024.png)
 - Save the generated plots with a specific filename format including the date.
 
 ## Installation
