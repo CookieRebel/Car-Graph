@@ -4,5 +4,5 @@ venv/
 ~*
 # Ignore all generated png
 *.png
-!porsche_911_price_vs_year_160724.png
-!porsche_911_mileage_vs_year_160724.png
+!porsche_911_year_vs_price_16072024.png
+!porsche_911_mileage_vs_price_16072024.png
