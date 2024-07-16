@@ -2,7 +2,8 @@
 
 Buying used cars is hard, especially knowing what a good market price for a used car is. The prices are mainly dependent on the year of the car and the mileage.
 
-This car price plotter takes yoru raw data that you collect eg. from carsales.com.au and plots it in a nice graph. It shows a best fit line (less accurate) and a best fit curve (more accurate). Given that info you can now instantly tell if a used car is good value based on the price, year, and mileage, in comparison to the current market.
+This car price plotter takes your raw data that you collect eg. from carsales.com.au and plots it in a nice graph. 
+It shows a best fit line (less accurate) and a best fit curve (more accurate). Given that info you can now instantly tell if a used car is good value based on the price, year, and mileage, in comparison to the current market.
 
 You can generate scatter plots that show the relationship between 
 - car price and model year; the mileage is visualised as the 3rd dimension using differnt colours
@@ -13,8 +14,10 @@ You can generate scatter plots that show the relationship between
 - List all `.xlsx` files in the current directory.
 - Generate scatter plots for:
   - Price vs. Year with mileage as the color.
+In this example you can see that prices of Porsche 911s follow a u-shape when analysed by year. The price drops until about 2001, after which Porsche 911s actually appreciate in value. Interetingly you can also see that the years 1998-2005 were particularly bad models when it comes to price. That's the universally hated 996 version of the Porsche.
 ![Scatter plot Price vs. Year with mileage as the color](porsche_911_year_vs_price_16072024.png)
   - Price vs. Mileage with year as the color.
+This graph shows the prices vs mileage. Intereestingly there is a significant between 80k and 100k kms.
 ![Scatter plot Price vs. Mileage with year as the color](porsche_911_mileage_vs_price_16072024.png)
 - View best fit line and best fit curve
 - Distinguish between Dealer and Private cars via the icon.
