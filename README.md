@@ -29,7 +29,7 @@ You can generate scatter plots that show the relationship between
 
 2. **Install the required Python packages**:
     ```bash
-    pip install pandas matplotlib numpy openpyxl
+    pip install -r requirements.txt
     ```
 
 ## Usage
@@ -38,7 +38,7 @@ You can generate scatter plots that show the relationship between
 
 2. **Run the script**:
     ```bash
-    python car_price_analysis.py
+    python plot_graph.py
     ```
 
 3. **Follow the prompts**:
