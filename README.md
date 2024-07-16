@@ -37,8 +37,6 @@ You can generate scatter plots that show the relationship between
 
 1. **Ensure your car price data is in an Excel file (`.xlsx` format) in the current directory**. The filename should follow the format: `car_name_year.xlsx`, for example, `mini_s_convertible_2015+.xlsx`.
 
-But Marc, where do I get the data from? Go to your favourite used car website (carsales.com.au, Gumtree, Facebook market place), search for your desired model, and create a spreadsheet from it. Little hack: I usually use ChatGPT "Make me a table with the following columns: Year, Model, Variant <...>. Here is the raw data: <mark the whole web page, copy-paste here"
-
 2. **Run the script**:
     ```bash
     python plot_graph.py
@@ -75,6 +73,8 @@ The Excel file should have the following columns:
 | Year | Model       | Variant  | Description                   | Price ($AUD) | Mileage (km) | Seller Type | Location | Source  | Comment | Comment 2 |
 |------|-------------|----------|-------------------------------|--------------|--------------|-------------|----------|---------|---------|-----------|
 | 1995 | Porsche 911 | 993      | Carrera Manual R              | 148998       | 93000        | Private     | NaN      | Carsales| NaN     | NaN       |
+
+But Marc, where do I get the data from? Go to your favourite used car website (carsales.com.au, Gumtree, Facebook market place), search for your desired model, and create a spreadsheet from it. Little hack: I usually use ChatGPT "Make me a table with the following columns: Year, Model, Variant <...>. Here is the raw data: <mark the whole web page, copy-paste here"
 
 ## Requirements
 
