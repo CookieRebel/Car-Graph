@@ -9,6 +9,13 @@ def list_excel_files():
     files = [f for f in os.listdir('.') if f.endswith('.xlsx') and not f.startswith('~')]
     return files
 
+# Function to format the car name from the filename
+def format_car_name(filename):
+    base_name = os.path.splitext(filename)[0]  # Remove extension
+    words = base_name.split('_')
+    formatted_name = ' '.join(word.capitalize() for word in words)
+    return formatted_name
+
 # Function to plot price vs year with mileage as color
 def plot_price_vs_year(df_cars, name, types_identifier, unique_types, symbols, cmap):
     plt.figure(figsize=(12, 8))
@@ -92,8 +99,9 @@ else:
     else:
         file_path = excel_files[file_index]
 
-        # Name
-        name = input("What is the name of the car we are plotting? ")
+        # Prefill the name based on the filename
+        prefilled_name = format_car_name(os.path.basename(file_path))
+        name = input(f"What is the name of the car we are plotting? [{prefilled_name}] ") or prefilled_name
 
         # Load the data from the spreadsheet
         df_cars = pd.read_excel(file_path)
