@@ -1,17 +1,23 @@
-# Car Price Analysis Script
+# Car Price Plotter 
 
-This script allows you to visualize car price data from an Excel file. You can generate scatter plots that show the relationship between car price and either model year or mileage. The script also allows you to prefill the car name based on the filename and saves the generated plots with a specific naming convention.
+Buying used cars is hard, especially knowing what a good market price for a used car is. The prices are mainly dependent on the year of the car and the mileage.
+
+This car price plotter takes yoru raw data that you collect eg. from carsales.com.au and plots it in a nice graph. It shows a best fit line (less accurate) and a best fit curve (more accurate). Given that info you can now instantly tell if a used car is good value based on the price, year, and mileage, in comparison to the current market.
+
+You can generate scatter plots that show the relationship between 
+- car price and model year; the mileage is visualised as the 3rd dimension using differnt colours
+- car price vs mileage; the model year is visualised as the 3rrd dimension using different colours
 
 ## Features
 
 - List all `.xlsx` files in the current directory.
-- Prefill the car name based on the filename.
 - Generate scatter plots for:
   - Price vs. Year with mileage as the color.
 ![Scatter plot Price vs. Year with mileage as the color](porsche_911_year_vs_price_16072024.png)
   - Price vs. Mileage with year as the color.
 ![Scatter plot Price vs. Mileage with year as the color](porsche_911_mileage_vs_price_16072024.png)
-- Save the generated plots with a specific filename format including the date.
+- View best fit line and best fit curve
+- Distinguish between Dealer and Private cars via the icon.
 
 ## Installation
 
