@@ -13,11 +13,9 @@ You can generate scatter plots that show the relationship between
 
 - List all `.xlsx` files in the current directory.
 - Generate scatter plots for:
-  - Price vs. Year with mileage as the color.
-In this example you can see that prices of Porsche 911s follow a u-shape when analysed by year. The price drops until about 2001, after which Porsche 911s actually appreciate in value. Interetingly you can also see that the years 1998-2005 were particularly bad models when it comes to price. That's the universally hated 996 version of the Porsche.
+  - Price vs. Year with mileage as the color. In this example you can see that prices of Porsche 911s follow a u-shape when analysed by year. The price drops until about 2001, after which Porsche 911s actually appreciate in value. Interetingly you can also see that the years 1998-2005 were particularly bad models when it comes to price. That's the universally hated 996 version of the Porsche.
 ![Scatter plot Price vs. Year with mileage as the color](porsche_911_year_vs_price_16072024.png)
-  - Price vs. Mileage with year as the color.
-This graph shows the prices vs mileage. Intereestingly there is a significant between 80k and 100k kms.
+  - Price vs. Mileage with year as the color. This graph shows the prices vs mileage. Intereestingly there is a significant between 80k and 100k kms.
 ![Scatter plot Price vs. Mileage with year as the color](porsche_911_mileage_vs_price_16072024.png)
 - View best fit line and best fit curve
 - Distinguish between Dealer and Private cars via the icon.
