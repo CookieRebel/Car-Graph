@@ -15,8 +15,8 @@ This script allows you to visualize car price data from an Excel file. You can g
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-repo/car-price-analysis.git
-    cd car-price-analysis
+    git clone https://github.com/CookieRebel/car-price-plotter.git
+    cd car-price-plotter
     ```
 
 2. **Install the required Python packages**:
