@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import Normalize, LinearSegmentedColormap
+from datetime import datetime
 
 # Function to list all .xlsx files in the current directory
 def list_excel_files():
@@ -14,10 +15,10 @@ def format_car_name(filename):
     base_name = os.path.splitext(filename)[0]  # Remove extension
     words = base_name.split('_')
     formatted_name = ' '.join(word.capitalize() for word in words)
-    return formatted_name
+    return formatted_name, base_name
 
 # Function to plot price vs year with mileage as color
-def plot_price_vs_year(df_cars, name, types_identifier, unique_types, symbols, cmap):
+def plot_price_vs_year(df_cars, name, base_name, types_identifier, unique_types, symbols, cmap):
     plt.figure(figsize=(12, 8))
     norm = Normalize(vmin=0, vmax=df_cars['Mileage (km)'].max())
 
@@ -40,12 +41,17 @@ def plot_price_vs_year(df_cars, name, types_identifier, unique_types, symbols, c
     plt.xlabel('Model Year')
     plt.ylabel('Price ($AUD)')
     plt.title(f'Model Year vs Price for {name} (Color indicates mileage)')
+
+    # Save the plot
+    date_str = datetime.now().strftime("%d%m%Y")
+    filename = f"{base_name}_year_vs_price_{date_str}"
+    plt.gcf().canvas.manager.set_window_title(filename)  # Set the window title to guide the user
     plt.legend()
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
     plt.show()
 
 # Function to plot price vs mileage with year as color
-def plot_price_vs_mileage(df_cars, name, types_identifier, unique_types, symbols, cmap):
+def plot_price_vs_mileage(df_cars, name, base_name, types_identifier, unique_types, symbols, cmap):
     plt.figure(figsize=(12, 8))
     norm = Normalize(vmin=df_cars['Year'].min(), vmax=df_cars['Year'].max())
 
@@ -67,6 +73,11 @@ def plot_price_vs_mileage(df_cars, name, types_identifier, unique_types, symbols
     plt.xlabel('Mileage (km)')
     plt.ylabel('Price ($AUD)')
     plt.title(f'Mileage vs Price for {name} (Color indicates year)')
+
+    # Save the plot
+    date_str = datetime.now().strftime("%d%m%Y")
+    filename = f"{base_name}_mileage_vs_price_{date_str}"
+    plt.gcf().canvas.manager.set_window_title(filename)  # Set the window title to guide the user
     plt.legend()
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
     plt.show()
@@ -100,7 +111,7 @@ else:
         file_path = excel_files[file_index]
 
         # Prefill the name based on the filename
-        prefilled_name = format_car_name(os.path.basename(file_path))
+        prefilled_name, base_name = format_car_name(os.path.basename(file_path))
         name = input(f"What is the name of the car we are plotting? [{prefilled_name}] ") or prefilled_name
 
         # Load the data from the spreadsheet
@@ -119,8 +130,8 @@ else:
         # Ask user which graph to generate
         graph_type = input("Which graph do you want to generate? (1 for price vs year, 2 for price vs mileage): ")
         if graph_type == '1':
-            plot_price_vs_year(df_cars, name, types_identifier, unique_types, symbols, cmap)
+            plot_price_vs_year(df_cars, name, base_name, types_identifier, unique_types, symbols, cmap)
         elif graph_type == '2':
-            plot_price_vs_mileage(df_cars, name, types_identifier, unique_types, symbols, cmap)
+            plot_price_vs_mileage(df_cars, name, base_name, types_identifier, unique_types, symbols, cmap)
         else:
             print("Invalid selection. Exiting.")
